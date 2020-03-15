@@ -7,31 +7,27 @@ fuge_global:
     - '*.log'
   env_file:
     - './telegram.env'
+
+    
 api:
   type: process
   path: ../01_api/src
   run: 'node index.js'
   monitor: true
 
-telegram:
-  type: process
-  path: ../08_telegram/src
-  run: 'node index.js'
-  monitor: true
 
-
-contact-store:
+classroom-store:
   type: process
-  path: ../07_website-contact-store/src
+  path: ../07_classroom-store/src
   run: 'node index.js'
   monitor: true
   environment:
-    - DB=geekagency
+    - DB=ecov
 
-flow-store:
+course-store:
   type: process
-  path: ../07_flow-store/src
+  path: ../07_course-store/src
   run: 'node index.js'
   monitor: true
   environment:
-    - DB=geekagency
+    - DB=ecov
