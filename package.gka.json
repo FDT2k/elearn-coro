@@ -1,0 +1,68 @@
+{
+  "project_name": "geekagency",
+  "registry": "registry.gitlab.com/fdt2k/geekagency",
+  "services": [
+    {
+      "path": "00_frontend",
+      "registry_key": "/frontend"
+    },
+    {
+      "path": "01_api",
+      "registry_key": "/api"
+    },
+    {
+      "path": "02_translation",
+      "registry_key": "/translation"
+    },
+    {
+      "path": "02_translation-store",
+      "registry_key": "/translation-store"
+    },
+    {
+      "path": "05_session",
+      "registry_key": "/session"
+    },
+    {
+      "path": "06_catalog-store",
+      "registry_key": "/catalog-store"
+    },
+    {
+      "path": "07_invite-store",
+      "registry_key": "/invite-store"
+    },
+    {
+      "path": "07_user-store",
+      "registry_key": "/user-store"
+    },
+    {
+      "path": "11_email-templates",
+      "registry_key": "/email-templates"
+    },
+    {
+      "path": "__ms-skel",
+      "registry_key": ""
+    },
+    {
+      "path": "07_website-contact-store",
+      "registry_key": ""
+    },
+    {
+      "path": "08_telegram",
+      "registry_key": ""
+    }
+  ],
+  "deploy": {
+    "dev": {
+      "host_prefix": "gka-dev",
+      "infra": "docker-machine",
+      "options": {
+        "provider": "virtualbox",
+        "cluster_type": "swarm"
+      },
+      "hosts": [
+        
+
+      ]
+    }
+  }
+}

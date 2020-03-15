@@ -1,0 +1,46 @@
+version: '3.3'
+volumes:
+  mongo-data:
+
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - mongo
+    command: mongod --replSet gka-dev --enableMajorityReadConcern false
+
+    deploy:
+      placement:
+        constraints:
+        - node.hostname==gka-dev-worker-1
+  mongo2:
+    image: mongo
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - mongo
+    command: mongod --replSet gka-dev --enableMajorityReadConcern false
+
+    deploy:
+      placement:
+        constraints:
+        - node.hostname==gka-dev-worker-2
+
+  mongo3:
+    image: mongo
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - mongo
+    command: mongod --replSet gka-dev --enableMajorityReadConcern false
+    deploy:
+      placement:
+        constraints:
+        - node.hostname==gka-dev-manager-1
+
+networks:
+  mongo:
+    driver: overlay
+    attachable: true

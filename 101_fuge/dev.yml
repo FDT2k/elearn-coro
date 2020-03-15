@@ -1,0 +1,37 @@
+fuge_global:
+  tail: true
+  monitor: true
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '*.log'
+  env_file:
+    - './telegram.env'
+api:
+  type: process
+  path: ../01_api/src
+  run: 'node index.js'
+  monitor: true
+
+telegram:
+  type: process
+  path: ../08_telegram/src
+  run: 'node index.js'
+  monitor: true
+
+
+contact-store:
+  type: process
+  path: ../07_website-contact-store/src
+  run: 'node index.js'
+  monitor: true
+  environment:
+    - DB=geekagency
+
+flow-store:
+  type: process
+  path: ../07_flow-store/src
+  run: 'node index.js'
+  monitor: true
+  environment:
+    - DB=geekagency

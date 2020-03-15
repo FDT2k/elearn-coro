@@ -1,0 +1,34 @@
+{
+	"name": "gka-api",
+	"license": "MIT",
+	"version": "1.0.0",
+	"main": "src/index.js",
+	"private": true,
+	"scripts": {
+		"start": "node src/index.js",
+		"debug": "npx nodemon --inspect",
+		"build:docker": "npm run build; docker build --build-arg NPM_TOKEN=${NPM_TOKEN} -t registry.gitlab.com/fdt2k/geekagency-website/api ./Docker/prod",
+		"push:docker": "docker push registry.gitlab.com/fdt2k/geekagency-website/api",
+		"build": "mkdir ./Docker/prod/dist; cp -a ./src  ./Docker/prod/dist/;cp  ./package.json  ./Docker/prod/dist/package.json",
+    "build:full": "npm run build && npm run build:docker && npm run push:docker"
+	},
+	"dependencies": {
+		"@geekagency/microservice-common-libs": "^0.7.43",
+		"@geekagency/microservice-translation": "^1.1.2",
+		"bluebird": "^3.5.3",
+		"cors": "^2.8.5",
+		"csvtojson": "^1.1.9",
+		"express-server-factory": "^0.1.10",
+		"express-useragent": "^1.0.12",
+		"jsonwebtoken": "^8.2.1",
+		"lodash": "^4.17.5",
+		"moment": "^2.20.1",
+		"mongoose": "^5.0.1",
+		"mongoose-i18n-localize": "^0.3.0",
+		"multer": "^1.3.0",
+		"randomstring": "^1.1.5"
+	},
+	"devDependencies": {
+		"nodemon": "^1.17.2"
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "script": "node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+      "args": "--host 0.0.0.0 --progress --colors  --config webpack.development.js --env.development",
+      "cwd": "00_frontend",
+      "name": "gka-frontend",
+      "watch": false,
+      "autorestart": false,
+      "env":
+        {"NODE_ENV":"development"},
+      "ignore_watch": ["node_modules",".git"]
+
+    }
+  ]
+}

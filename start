@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "starting"
+yarn add @geekagency/gka-cli-pm  2>&1 1>/dev/null
+yarn upgrade 2>&1 1>/dev/null
+
+node node_modules/@geekagency/gka-cli-pm/src/index.js $(pwd)
+
+#fuge shell 101_fuge/dev.yml
