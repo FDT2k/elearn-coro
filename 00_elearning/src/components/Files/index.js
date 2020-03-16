@@ -1,6 +1,22 @@
 import React from 'react'
+import {compose,map} from '@geekagency/composite-js'
+const files = {
+    "1132":{
+        "_":[
+            {
+                title:"instructions",
+                file: "http://blabla.me"
+            }
+        ]
+    }
+}
 
+const kmap = f=>o=> Object.keys(o).map(x=>f(o[x],x))
 
+let render_file = x=><h1>{x.title}</h1>
+let render_file_list = map(render_file)
+let render_level_2 = (val,key)=>(<li>{key}-{render_file_list(val)}</li>)
+let t = kmap(kmap(render_level_2))(files)
 
 export default props => {
 

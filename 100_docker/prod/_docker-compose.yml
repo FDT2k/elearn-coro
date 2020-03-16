@@ -1,0 +1,76 @@
+version: '3.3'
+
+
+services:
+
+  frontend:
+    image: registry.gitlab.com/fdt2k/e20/frontend
+    networks:
+      - web
+    env_file:
+        - front.env
+    deploy:
+      placement:
+          constraints:
+           - node.role == manager
+  api:
+    image: registry.gitlab.com/fdt2k/geekagency-website/api:latest
+    networks:
+     - nats
+     - web
+    depends_on:
+     - nats-main
+    env_file:
+     - api.env
+     - mongodb.env
+     - nats.env
+
+    deploy:
+      placement:
+          constraints:
+           - node.role == manager
+
+
+  contact-store:
+    image: registry.gitlab.com/fdt2k/geekagency-website/contact-store:latest
+    networks:
+     - nats
+     - mongo
+    depends_on:
+      - nats-main
+    env_file:
+      - mongodb.env
+      - nats.env
+
+  bot:
+    image: registry.gitlab.com/fdt2k/geekagency-website/telegram:latest
+    networks:
+      - web
+      - nats
+      - mongo
+    depends_on:
+     - api
+     - contact-store
+
+    env_file:
+      - mongodb.env
+      - nats.env
+      - telegram.env
+
+  nats-main:
+    image: nats
+    networks:
+      - nats
+    command: -cluster nats://0.0.0.0:6222 -DV
+
+
+networks:
+  mongo:
+    external:
+      name: wedplan_mongo
+  nats:
+    driver: overlay
+    attachable: true
+  web:
+    external:
+      name: proxy
