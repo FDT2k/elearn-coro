@@ -21,32 +21,40 @@ let t = kmap(kmap(render_level_2))(files)
 export default props => {
 
   return (
-    <div className="files">
+    <div className="theme-light_elm cover just-between align-stretch">
 
-      <div className="theme-dark">
-        <header className="main-header  flex just-center">
-          <h1>Classe n°1132</h1>
+      <div className="theme-dark_elm">
+        <header className="main-header">
+          <h1>Classe N°1132</h1>
         </header>
       </div>
-        {t}
-        {
 
-            Object.keys(files).map(file=>{
-                let cat = files[file]
-                return Object.keys(cat).map(c=>{
-                    let items = files[file][c]
-                    return items.map(item=>{
-                        console.log(item)
-                        return <li>{item.title}</li>
-                    })
-                })
-            })
-        }
-      <section className="theme-light">
-        <div>
-          <button onClick={props.handleLogin}>Login</button>
-        </div>
+      <section className="first-category flex flex-column just-center align-start">
+        <article className="1-column">
+          <header>
+            <h2>Grande Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptate labore modi accusamus, soluta nam vero, culpa cum esse eos error.</p>
+          </header>
+          <section>
+            <h4>Dossier</h4>
+            <ul>
+              <li>fichier à télécharger</li>
+              <li>fichier à télécharger</li>
+              <li>fichier à télécharger</li>
+              <li>fichier à télécharger</li>
+            </ul>
+          </section>
+        </article>
+
+        <button onClick={props.handleLogin}>Accéder aux cours</button>
       </section>
+
+      <footer className="footer">
+        <div>
+          <p>2020 - Designed with love, cocoa and coffe by <a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">GeekAgency</a> - Switzerland</p>
+        </div>
+      </footer>
+
     </div>
 
   )
