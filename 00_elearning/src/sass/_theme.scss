@@ -1,0 +1,112 @@
+@import 'adobe';
+
+$white: gray(100);
+$OuterSpace: $GKA-Theme-1-rgba;
+$bloup: #383636;
+$Elm: $GKA-Theme-2-rgba;
+$Bermuda: $GKA-Theme-3-rgba;
+$DeepSeaGreen: $UI-Color-4-rgba;
+$SandyBrown: $GKA-Theme-4-rgba;
+$Coral: #ff7954;
+$Oasis: $UI-Color-1-rgba;
+$OasisLight: color($Oasis, 97%);
+$SeaBuckthorn: $GKA-Theme-5-rgba;
+
+$info: $UI-Color-3-rgba;
+$success: $UI-Color-5-rgba;
+$error: $UI-Color-2-rgba;
+
+/* GRAY
+//rgba(40, 48, 51, 0.51),*/
+$gray-99: gray(99);
+$gray-97: gray(97);
+$gray-87: gray(87);
+$gray-72: gray(72);
+$gray-47: gray(47);
+
+
+$themes: (
+  light: (
+    titleFont:'gibbs',
+    mainFont: 'soleil',
+    textColor: $OuterSpace,
+    textColorSecondary: $OuterSpace,
+
+    backgroundColorSecondary: $white,
+    backgroundColor: $white,
+
+    shadow: $gray-72,
+    fieldsText: $gray-47,
+    helperText: $gray-87,
+    info: $Coral,
+    error: $error,
+    success: $success,
+    link: $Coral,
+
+    // Buttons
+    buttonTextTransform: uppercase,
+    buttonTextColor: $white,
+    buttonTextHoverColor: $OuterSpace,
+
+    buttonColor: $Coral,
+    buttonBorder: 2px solid $Coral,
+    buttonHoverColor: $Oasis,
+
+
+  ),
+  dark_orange: (
+    titleFont:'gibbs',
+    mainFont: 'soleil',
+    textColor: $OuterSpace,
+    textColorSecondary: $OuterSpace,
+
+    backgroundColorSecondary: $OasisLight,
+    backgroundColor: $Oasis,
+
+    shadow: $SeaBuckthorn,
+    fieldsText: $gray-47,
+    helperText: $gray-87,
+    info: $Coral,
+    error: $error,
+    success: $success,
+    link: $Coral,
+
+    // Buttons
+    buttonTextTransform: uppercase,
+    buttonTextColor: $white,
+    buttonTextHoverColor: $OuterSpace,
+
+    buttonColor: $Coral,
+    buttonBorder: 2px solid $Coral,
+    buttonHoverColor: $SeaBuckthorn,
+
+
+
+  ),
+  dark: (
+    titleFont:'gibbs',
+    mainFont: 'soleil',
+    textColor: $gray-99,
+    textColorSecondary: $OuterSpace,
+
+    backgroundColorSecondary: $OasisLight,
+    backgroundColor: $OuterSpace,
+
+    shadow: $SeaBuckthorn,
+    fieldsText: $gray-47,
+    helperText: $gray-87,
+    info: $SeaBuckthorn,
+    error: $error,
+    success: $success,
+    link: $SeaBuckthorn,
+
+    // Buttons
+    buttonTextTransform: uppercase,
+    buttonTextColor: $white,
+    buttonTextHoverColor: $OuterSpace,
+
+    buttonColor: $Coral,
+    buttonBorder: 2px solid $Coral,
+    buttonHoverColor: $SeaBuckthorn,
+  ),
+);

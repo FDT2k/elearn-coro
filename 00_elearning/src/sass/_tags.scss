@@ -1,0 +1,143 @@
+$baserem:14;
+
+html,
+body {
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	@include themify($themes) {
+	 color: themed('textColor');
+	 background-color: themed('backgroundColor');
+	 @include themed_font('mainFont','light');
+ 	}
+}
+
+section,footer,header {
+	@include themify($themes) {
+	 color: themed('textColor');
+	 background-color: themed('backgroundColor');
+	 @include themed_font('mainFont','light');
+	}
+
+	& > * {
+		max-width: 1024px;
+		padding: 20px 5%;
+	}
+
+}
+
+h1 {
+	@include themify($themes) {
+	 color: themed('textColor');
+	 @include themed_font('titleFont','thin');
+  }
+	//font-size: rem(70);
+	@include fluid-type(font-size, 320px, 1366px, 34px, 70px);
+}
+
+h2 {
+	@include themify($themes) {
+	 color: themed('textColor');
+	 @include themed_font('mainFont','thin');
+	}
+	@include fluid-type(font-size, 320px, 1366px, 32px, 40px);
+	text-align: center;
+}
+
+h3 {
+	@include themify($themes) {
+	 color: themed('textColor');
+	 @include themed_font('mainFont','bold');
+	}
+	@include fluid-type(font-size, 320px, 1366px, 18px, 38px);
+	// font-size: rem(36);
+	text-align: left;
+	padding-bottom: 5px;
+}
+
+h4{
+	@include themify($themes) {
+	 color: themed('textColor');
+	 @include themed_font('mainFont','semi-bold');
+	}
+	@include fluid-type(font-size, 320px, 1366px, 16px, 18px);
+}
+
+p {
+	@include themify($themes) {
+	 color: themed('textColor');
+	 @include themed_font('mainFont','thin');
+	}
+	@include fluid-type(font-size, 320px, 1366px, 16px, 18px);
+}
+
+b {
+	font-weight:bold;
+}
+
+footer{
+	text-align: center;
+	@include themify($themes) {
+		color: themed('textColor');
+	}
+	min-width: 100%;
+	@include themify($themes) {
+	 @include themed_font('mainFont','regular');
+	}
+	@include fluid-type(font-size, 320px, 1366px, 14px, 16px);
+}
+
+button, button:active{
+	@include themify($themes) {
+		color: themed('buttonTextColor');
+		border: 1px solid themed('buttonColor');
+		background-color:themed('buttonColor');
+		text-transform: themed('buttonTextTransform');
+		@include themed_font('mainFont', 'semi-bold');
+	}
+	outline: none;
+}
+button {
+	min-height: 40px;
+	border-radius: 2px;
+	padding: 1em 1.5em;
+	cursor: pointer;
+
+	&:hover, &:focus {
+		@include themify($themes) {
+			color: themed('buttonTextHoverColor');
+			border: 1px solid themed('buttonHoverColor');
+			background-color:themed('buttonHoverColor');
+		}
+	}
+}
+
+a{
+	@include themify($themes) {
+		color: themed('link');
+		@include themed_font('mainFont','regular');
+	}
+}
+
+article {
+  margin: 2.5%;
+  min-width: 33%;
+	width: auto;
+  max-width: 45%;
+	@include flex-grow-children(1);
+	@include mq-width-and-lower(768px){
+		max-width: inherit;
+		max-width: -webkit-fit-content;
+		max-width: -moz-fit-content;
+		max-width: fit-content;
+	}
+
+	p {
+		padding: 10px 0px;
+	  text-align:justify;
+		@include mq-width-and-lower(768px) {
+			padding: 0px 0px 20px;
+		}
+	}
+
+}

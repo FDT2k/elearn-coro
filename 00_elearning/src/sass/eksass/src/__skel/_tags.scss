@@ -1,0 +1,48 @@
+html,
+body {
+	font-family: gibbs, $sans-fonts;
+
+	@include themify($themes) {
+	 color: themed('textColor');
+	 background-color: themed('backgroundColor');
+ }
+}
+
+h1 {
+	font-family: gibbs, sans-serif;
+	font-weight: 100;
+	@include themify($themes) {
+	 color: themed('textColor');
+  }
+}
+
+h3 {
+	font-family: gibbs, sans-serif;
+	font-weight: 400;
+
+	@include for-small-phone-only{
+		font-size: $px12;
+	}
+}
+
+b{
+	font-weight:bold;
+}
+
+footer{
+	position: fixed;
+	bottom: 0px;
+	text-align: right;
+	color: #383636;
+	min-width: 100%;
+	padding: 5px;
+	font-family: arial;
+	font-size: $px9;
+}
+
+button{
+  border: 2px solid white;
+  color:white;
+  background-color:black;
+  min-height: 40px;
+}
