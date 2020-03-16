@@ -38,7 +38,7 @@ bs.natsFactory((nats,logger)=>{
     helper.useBodyParser();
 
     const service_discovery = ()=> setTimeout(()=> {
-      nats.publish('service-discovery.register',{node_id:'coucou',port:server.address().port})
+      nats.publish('service-discovery.register',{node_id:'coucou',service_type:'file_upload',port:server.address().port})
       service_discovery();
     } , 5000)
 
