@@ -1,0 +1,236 @@
+/* FONTS */
+
+.main-title{
+    letter-spacing: 0.4em;
+    //font-size: rem(110);
+    @include fluid-type(font-size, 320px, 1366px, 30px, 110px);
+    padding-left: 0.4em;
+    text-align: center;
+    opacity:0;
+    line-height: 1.5em;
+}
+
+.quote{
+  padding-top:5px;
+  font-size:rem(22);
+}
+
+.slogan{
+  position:relative;
+  opacity:0;
+  @include fluid-type(font-size, 320px, 1366px, 20px, 30px);
+  @include themify($themes) {
+   color: themed('info');
+  }
+  @include mq-width-and-lower(425px){
+    display: none;
+  }
+}
+
+.page-title{
+  text-transform: uppercase;
+
+  &--anim{
+    opacity:0;
+  }
+
+}
+
+.info {
+  @include themify($themes) {
+    color: themed('info');
+  }
+}
+
+.success {
+  @include themify($themes) {
+    color: themed('success');
+  }
+}
+
+.error {
+  @include themify($themes) {
+    color: themed('error');
+  }
+}
+
+/* NAV */
+.main-nav div{
+	font-size: rem(14);;
+  font-family: gibbs, sans-serif;
+	font-weight: 400;
+  text-transform: uppercase;
+  cursor:pointer;
+
+  padding-right:10px;
+}
+
+.main-nav div::after{
+  content:'|';
+  padding-left:10px;
+}
+
+.main-nav div:last-child:after{
+  content:'';
+
+}
+
+.nav {
+  max-width:100vw;
+  right: 30px;
+  top: 15px;
+  position: fixed;
+  @include flex;
+  @include flex-direction(row);
+}
+
+.langue-container .active{
+	font-weight: 900;
+}
+
+/* GLOBAL CLASSES */
+.content_container{
+  width: 100%;
+  max-width: 1229px;
+}
+
+.centered{
+  padding-top: 100px;
+}
+
+.cover {
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	margin: 0px auto;
+  padding: 120px rem(20);
+  @include flex;
+  @include flex-direction(column);
+	@include flex-align(center);
+
+  @include themify($themes) {
+     color: themed('textColor');
+     background-color: themed('backgroundColor');
+   }
+
+  &--v-center{
+     @include flex-just(center);
+
+     > header {
+       padding-bottom: 50px;
+       @include mq-width-and-lower(500px) {
+         padding-bottom: 5px;
+       }
+     }
+
+     >:not(header) {
+       padding-bottom: 10px;
+     }
+  }
+  @include mq-width-and-lower(768px){
+    padding: 5em 1.25rem 3em;
+  }
+}
+
+.card {
+  padding: 3%;
+  border-radius: 2px;
+  @include themify($themes){
+    background-color: themed('backgroundColorSecondary');
+    box-shadow: 0px 0px 4px 0px themed('shadow');
+  }
+}
+
+/* Flex */
+
+.flex-row {
+  @include mq-width-and-lower(768px){
+    @include flex-direction(column);
+  }
+}
+
+/* Sections */
+.main-header {
+  padding-top: 4%;
+}
+.philosophy {
+  h3 {
+    border-bottom: 3px solid;
+    padding-bottom: 12px;
+    margin-bottom: 5px;
+    @include fluid-type(font-size, 768px, 1366px, 18px, 30px);
+    @include mq-width-and-lower(768px){
+      @include fluid-type(font-size, 320px, 1366px, 18px, 38px);
+      border-bottom: inherit;;
+      padding-bottom: 5px;
+      margin-bottom: initial;
+    }
+  }
+  article {
+    min-width: 25%;
+  	width: auto;
+    max-width: 28%;
+    @include mq-width-and-lower(768px){
+  		max-width: inherit;
+  		max-width: -webkit-fit-content;
+  		max-width: -moz-fit-content;
+  		max-width: fit-content;
+  	}
+  }
+}
+.contact-us {
+  .cover {
+    min-height: 95vh;
+  }
+
+  article {
+    @include mq-width-and-lower(1024px){
+      width: 100%;
+      max-width: 80%;
+      @include flex-order(2);
+
+      &:last-child {
+        @include flex-order(1);
+      }
+    }
+    @include mq-width-and-lower(425px) {
+      max-width: 100%;
+    }
+  }
+
+  h3 {
+    line-height: 1.4em;
+    @include mq-width-and-lower(1024px){
+      text-align: center;
+      line-height: 1.8em;
+    }
+  }
+
+  button {
+    @include flex-align-self-children(start);
+    @include mq-width-and-lower(500px) {
+      @include flex-align-self-children(stretch);
+    }
+  }
+  /* Flexbox */
+  @include mq-width-and-lower(1024px){
+		.flex-row {
+			@include flex-direction(column);
+		}
+		.just-between {
+			@include flex-just(center);
+		}
+		.align-start {
+			@include flex-align(center);
+		}
+  }
+
+
+}
+
+.footer {
+  div {
+    padding: 1em;
+    min-height: 5vh;
+  }
+}

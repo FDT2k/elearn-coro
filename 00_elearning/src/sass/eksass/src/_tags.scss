@@ -1,0 +1,38 @@
+$rembase: 14;
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	@include fluid-type(font-size, 320px, 1366px, 16px, 18px);
+	line-height: 1.5em;
+}
+
+h1 {
+  line-height: 1.3em;
+}
+
+h2 {
+  line-height: 1.2em;
+}
+
+h3 {
+	line-height: 1.2em;
+}
+
+h4 {
+	line-height: 1.2em;
+}
+
+p {
+}
+
+a {
+	text-decoration: none;
+	color: $cDefaultLink;
+}
