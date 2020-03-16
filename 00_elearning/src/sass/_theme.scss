@@ -54,6 +54,34 @@ $themes: (
 
 
   ),
+  light_elm: (
+    titleFont:'gibbs',
+    mainFont: 'soleil',
+    textColor: $OuterSpace,
+    textColorSecondary: $OuterSpace,
+
+    backgroundColorSecondary: $white,
+    backgroundColor: $white,
+
+    shadow: $gray-72,
+    fieldsText: $gray-47,
+    helperText: $gray-87,
+    info: $Elm,
+    error: $error,
+    success: $success,
+    link: $Elm,
+
+    // Buttons
+    buttonTextTransform: uppercase,
+    buttonTextColor: $white,
+    buttonTextHoverColor: $OuterSpace,
+
+    buttonColor: $Elm,
+    buttonBorder: 2px solid $Elm,
+    buttonHoverColor: $Bermuda,
+
+
+  ),
   dark_orange: (
     titleFont:'gibbs',
     mainFont: 'soleil',
@@ -82,6 +110,32 @@ $themes: (
 
 
 
+  ),
+  dark_elm: (
+    titleFont:'gibbs',
+    mainFont: 'soleil',
+    textColor: $gray-99,
+    textColorSecondary: $OuterSpace,
+
+    backgroundColorSecondary: $OasisLight,
+    backgroundColor: $Elm,
+
+    shadow: $Bermuda,
+    fieldsText: $gray-47,
+    helperText: $gray-87,
+    info: $Bermuda,
+    error: $error,
+    success: $success,
+    link: $Bermuda,
+
+    // Buttons
+    buttonTextTransform: uppercase,
+    buttonTextColor: $white,
+    buttonTextHoverColor: $OuterSpace,
+
+    buttonColor: $Elm,
+    buttonBorder: 2px solid $Elm,
+    buttonHoverColor: $Bermuda,
   ),
   dark: (
     titleFont:'gibbs',
