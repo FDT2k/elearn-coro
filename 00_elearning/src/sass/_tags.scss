@@ -21,7 +21,11 @@ section,footer,header {
 
 	& > * {
 		max-width: 1024px;
-		padding: 20px 5%;
+		padding: 20px 30px;
+		margin: 0px auto;
+		@include mq-width-and-lower(425px){
+			padding: 20px 15px;
+		}
 	}
 
 }
@@ -33,6 +37,7 @@ h1 {
   }
 	//font-size: rem(70);
 	@include fluid-type(font-size, 320px, 1366px, 34px, 70px);
+	text-align: center;
 }
 
 h2 {

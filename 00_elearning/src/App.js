@@ -8,8 +8,8 @@ function App() {
   const [logged,setLogged] = useState(false)
 
   return (
-    <div className="App">
-      {logged && <Files/>}
+    <div className="App theme-light">
+      {logged && <Files handleLogin={_=>setLogged(false)}/>}
       {!logged && <Login handleLogin={_=>setLogged(true)}/>}
     </div>
   );

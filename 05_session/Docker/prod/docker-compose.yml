@@ -1,9 +1,0 @@
-node:
-  build: ./
-  environment:
-    - MONGO_SERVER=172.17.0.2
-    - MONGO_DATABASE=saladin
-    - MONGO_PWD=gYYF9bobmi
-    - MONGO_USER=saladin
-
-  restart: unless-stopped

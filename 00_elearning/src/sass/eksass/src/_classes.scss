@@ -30,10 +30,13 @@
 	margin: 0px auto;
   @include flex;
   @include flex-direction(column);
-	@include flex-just(center);
-	@include flex-align(center);
+  &--align-center {
+    @include flex-align(center);
+  }
+  &--just-center{
+     @include flex-just(center);
+  }
 }
-
 
 .centered{
   width: 100%;
