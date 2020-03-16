@@ -13,7 +13,7 @@ export default props => {
         </header>
       </div>
 
-        <div className="contact-us">
+        <div className="theme-light_elm contact-us">
           <section className="flex just-center">
               <form className="form_login flex flex-column">
                 <div className="floating-label-wrap">
@@ -35,7 +35,7 @@ export default props => {
 
         </div>
 
-        <footer className="footer">
+        <footer className="theme-light_elm footer">
           <div>
             <p>2020 - Designed with love, cocoa and coffe by <a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">GeekAgency</a> - Switzerland</p>
           </div>
