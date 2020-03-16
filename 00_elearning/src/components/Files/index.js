@@ -31,8 +31,8 @@ export default props => {
         </header>
       </div>
 
-      <section className="first-category flex flex-column just-center align-start">
-        <article className="1-column">
+      <section className="first-category flex flex-column just-center align-center">
+        <article className="column-1">
           <header>
             <h2>Grande Section</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptate labore modi accusamus, soluta nam vero, culpa cum esse eos error.</p>
@@ -40,15 +40,100 @@ export default props => {
           <section>
             <h4>Dossier</h4>
             <ul>
-              <li>fichier à télécharger</li>
-              <li>fichier à télécharger</li>
-              <li>fichier à télécharger</li>
-              <li>fichier à télécharger</li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
             </ul>
           </section>
+          <button onClick={props.handleLogin}>Accéder aux cours</button>
         </article>
 
-        <button onClick={props.handleLogin}>Accéder aux cours</button>
+        <article className="column-1">
+          <header>
+            <h2>Grande Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptate labore modi accusamus, soluta nam vero, culpa cum esse eos error.</p>
+          </header>
+          <section>
+            <h4>Dossier</h4>
+            <ul>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+            </ul>
+          </section>
+          <button onClick={props.handleLogin}>Accéder aux cours</button>
+        </article>
+
+        <article className="column-1">
+          <header>
+            <h2>Grande Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptate labore modi accusamus, soluta nam vero, culpa cum esse eos error.</p>
+          </header>
+          <section>
+            <h4>Dossier</h4>
+            <ul>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+            </ul>
+          </section>
+          <button onClick={props.handleLogin}>Accéder aux cours</button>
+        </article>
+
+        <article className="column-1">
+          <header>
+            <h2>Grande Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptate labore modi accusamus, soluta nam vero, culpa cum esse eos error.</p>
+          </header>
+          <section>
+            <h4>Dossier</h4>
+            <ul>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+            </ul>
+          </section>
+          <button onClick={props.handleLogin}>Accéder aux cours</button>
+        </article>
+
+        <article className="column-1">
+          <header>
+            <h2>Grande Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptate labore modi accusamus, soluta nam vero, culpa cum esse eos error.</p>
+          </header>
+          <section>
+            <h4>Dossier</h4>
+            <ul>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+            </ul>
+          </section>
+          <button onClick={props.handleLogin}>Accéder aux cours</button>
+        </article>
+
+        <article className="column-1">
+          <header>
+            <h2>Grande Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptate labore modi accusamus, soluta nam vero, culpa cum esse eos error.</p>
+          </header>
+          <section>
+            <h4>Dossier</h4>
+            <ul>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+              <li><a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">fichier à télécharger</a></li>
+            </ul>
+          </section>
+          <button onClick={props.handleLogin}>Accéder aux cours</button>
+        </article>
+
       </section>
 
       <Footer/>

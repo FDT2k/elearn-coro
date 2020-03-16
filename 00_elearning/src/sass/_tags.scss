@@ -125,21 +125,21 @@ a{
 
 article {
 
-	&.1-column {
+	&.column-1 {
 		margin: 2.5%;
 		min-width: 33%;
 		width: auto;
-		max-width: 100%;
+		max-width: 1024px;
 		@include flex-grow-children(1);
-		@include mq-width-and-lower(768px){
-			max-width: inherit;
-			max-width: -webkit-fit-content;
-			max-width: -moz-fit-content;
-			max-width: fit-content;
-		}
+		// @include mq-width-and-lower(768px){
+		// 	max-width: inherit;
+		// 	max-width: -webkit-fit-content;
+		// 	max-width: -moz-fit-content;
+		// 	max-width: fit-content;
+		// }
 	}
 
-	&.2-column {
+	& .2-column {
 		margin: 2.5%;
 		min-width: 33%;
 		width: auto;
