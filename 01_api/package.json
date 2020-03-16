@@ -10,7 +10,7 @@
 		"build:docker": "npm run build; docker build --build-arg NPM_TOKEN=${NPM_TOKEN} -t registry.gitlab.com/fdt2k/geekagency-website/api ./Docker/prod",
 		"push:docker": "docker push registry.gitlab.com/fdt2k/geekagency-website/api",
 		"build": "mkdir ./Docker/prod/dist; cp -a ./src  ./Docker/prod/dist/;cp  ./package.json  ./Docker/prod/dist/package.json",
-    "build:full": "npm run build && npm run build:docker && npm run push:docker"
+		"build:full": "npm run build && npm run build:docker && npm run push:docker"
 	},
 	"dependencies": {
 		"@geekagency/microservice-common-libs": "^0.7.43",
@@ -18,6 +18,7 @@
 		"bluebird": "^3.5.3",
 		"cors": "^2.8.5",
 		"csvtojson": "^1.1.9",
+		"express-http-proxy": "^1.6.0",
 		"express-server-factory": "^0.1.10",
 		"express-useragent": "^1.0.12",
 		"jsonwebtoken": "^8.2.1",
