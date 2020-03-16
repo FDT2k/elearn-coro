@@ -29,7 +29,7 @@ export default props => {
                   </label>
                 </div>
 
-                <button onClick={props.handleLogin}>Me connecter</button>
+                <button onClick={props.handleLogin}>Accéder aux cours</button>
               </form>
           </section>
 
@@ -37,7 +37,7 @@ export default props => {
 
         <footer className="theme-light footer">
           <div>
-            <p>2020 - Designed with love, cocoa and coffe by GeekAgency - Switzerland</p>
+            <p>2020 - Designed with love, cocoa and coffe by <a target="_blank" href="https://www.geekagency.ch">GeekAgency</a> - Switzerland</p>
           </div>
         </footer>
 
