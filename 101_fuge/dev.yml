@@ -8,13 +8,26 @@ fuge_global:
   env_file:
     - './telegram.env'
 
-    
+
 api:
   type: process
   path: ../01_api/src
   run: 'node index.js'
   monitor: true
 
+session:
+  type: process
+  path: ../05_session/src
+  run: 'node index.js'
+  monitor: true
+
+user-store:
+  type: process
+  path: ../07_user-store/src
+  run: 'node index.js'
+  monitor: true
+  environment:
+    - DB=ecov
 
 classroom-store:
   type: process
@@ -27,6 +40,22 @@ classroom-store:
 course-store:
   type: process
   path: ../07_course-store/src
+  run: 'node index.js'
+  monitor: false
+  environment:
+    - DB=ecov
+
+file-store:
+  type: process
+  path: ../06_file-store/src
+  run: 'node index.js'
+  monitor: true
+  environment:
+    - DB=ecov
+
+service-discovery:
+  type: process
+  path: ../04_service-discovery/src
   run: 'node index.js'
   monitor: true
   environment:

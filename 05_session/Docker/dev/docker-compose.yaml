@@ -1,0 +1,11 @@
+mongodev:
+  image: mongo
+  ports:
+  - 27017:27017
+
+mongo-express:
+  image: mongo-express
+  links:
+  - mongodev:mongo
+  ports:
+  - 8081:8081
