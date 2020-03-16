@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "build:docker": " docker build -t registry.gitlab.com/fdt2k/e20/frontend ./docker/app",
     "push:docker": "docker push registry.gitlab.com/fdt2k/e20/frontend",
-    "build": "GKA_API=http://api.geekagency.ch react-scripts build && cp package.json ./build && cp -a ./build docker/app",
+    "build": "REACT_APP_WIP=yes GKA_API=http://api.geekagency.ch react-scripts build && cp package.json ./build && cp -a ./build docker/app",
     "build:full": "npm run build && npm run build:docker && npm run push:docker"
   },
   "eslintConfig": {

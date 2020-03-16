@@ -5,3 +5,19 @@
 @import 'classes';
 @import 'tags';
 @import 'components/form';
+
+
+.grid {
+  display:grid;
+  grid-template-rows: 5em auto 60px;
+  height:100vh;
+}
+
+.grid .footer div{
+  padding:0px;
+}
+
+.grid .main-header{
+  padding: 0px;
+  height:100%;
+}

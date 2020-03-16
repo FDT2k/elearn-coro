@@ -1,5 +1,5 @@
 SERVICES=(
-00_frontend
+00_elearning
 )
 
 

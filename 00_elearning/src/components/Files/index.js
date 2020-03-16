@@ -1,5 +1,7 @@
 import React from 'react'
 import {compose,map} from '@geekagency/composite-js'
+import Footer from '../Footer'
+
 const files = {
     "1132":{
         "_":[
@@ -49,11 +51,7 @@ export default props => {
         <button onClick={props.handleLogin}>Accéder aux cours</button>
       </section>
 
-      <footer className="footer">
-        <div>
-          <p>2020 - Designed with love, cocoa and coffe by <a rel="noopener noreferrer" target="_blank" href="https://www.geekagency.ch">GeekAgency</a> - Switzerland</p>
-        </div>
-      </footer>
+      <Footer/>
 
     </div>
 
