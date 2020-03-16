@@ -127,14 +127,6 @@
   padding-top: 4%;
 }
 
-.login {
-  display: grid;
-  min-height: 100vh;
-  @include themify($themes){
-    background-color: themed('backgroundColor');
-  }
-}
-
 .philosophy {
   h3 {
     border-bottom: 3px solid;
