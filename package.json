@@ -1,6 +1,7 @@
 {
   "devDependencies": {},
   "dependencies": {
+    "@geekagency/microservice-common-libs": "^0.7.43",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2"
   }

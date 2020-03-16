@@ -1,0 +1,19 @@
+version: '2'
+services:
+  nats:
+    image: nats
+    ports:
+      - ${NATS_PORT}:4222
+    command: -D
+
+  mongo:
+    image: mongo
+    ports:
+      - ${MONGO_PORT}:27017
+
+  mongo_express:
+    image: mongo-express
+    links:
+      - mongo:mongo
+    ports:
+      - ${ME_PORT}:8081

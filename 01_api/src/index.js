@@ -12,7 +12,9 @@ const _ = require('lodash');
 
 
 const Translation = require('@geekagency/microservice-translation/src/express');
-const Contact = require('./routes/contact');
+const Student = require('./routes/student');
+const User = require('./routes/user');
+const Files = require('./routes/file-upload');
 
 //load routes
 
@@ -97,7 +99,11 @@ _nats({}).then((nats)=>{
 
   const routes = [
     router.use('/translation',Translation(nats)),
-    router.use('/contact',Contact(nats)),
+    router.use('/student',Student(nats)),
+    router.use('/user',User(nats)),
+    router.use('/files',Files(nats)),
+
+
   ];
 
   server.start(config.serverSettings,mediator,middlewares,routes);
