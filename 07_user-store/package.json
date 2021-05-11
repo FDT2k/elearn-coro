@@ -15,7 +15,7 @@
     "@geekagency/microservice-user-store": "^0.0.4",
     "bluebird": "^3.5.3",
     "email-validator": "^2.0.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "moment": "^2.22.2",
     "mongoose": "^5.3.13",
     "parameter-validator": "^1.0.5",
